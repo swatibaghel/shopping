@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>shoppinig template</title>
+    <style>
+     header{
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 2px 2px 2px gray;
+        margin: 5px;
+        padding: 25px;
+        }
+     .left{
+        font-family: Arial;
+        font-size: 24px;
+        font-weight: bold;
+     }
+     .center span{
+        font-family: Arial;
+        font-size: 20px;
+        padding-right: 10px;
+        margin-right: 10px;
+     }
+     .right span {
+        font-family: Arial;
+        font-size: 20px;
+        padding-right: 10px;
+        margin-right: 10px;
+     }
+     article {
+       padding:10px;
+       text-align: center;
+       font-size: 17px;
+       margin: top 20px;
+       background-color: black;
+       color:white;
+
+     }
+     main{
+        display:flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        
+     }
+     .women{
+        background-image: url("/public/shopping/e1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:400px;
+        width:100%
+     }
+    .men{
+        background-image: url("/public/shopping/e2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:400px;
+        width:100%  
+    }
+    .kids{
+        background-image: url("/public/shopping/e3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:400px;
+        width:100%
+    }
+    h1{
+        font-family: Arial;
+        font-size: 40px;
+        text-align: center;
+        color:white;
+        margin-top: 130px;
+        text-shadow: 3px 3px 3px black;
+    }
+    .button {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial;
+        color:black;
+        background-color: white;
+        text-align: center;
+        border-radius:5px;
+        width: 165px;
+        height: 35px;
+        margin-top: 180px;
+        margin-left: 150px;
+         }
+         highlights{
+            display:grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            padding: 4px;
+            margin-bottom: 10px;
+        }
+        highlights p{
+            font-size: 15px;
+            margin-left: 3px;
+            color:gray;
+            margin-top: 20px;
+        }
+       highlights h4{
+        margin-bottom: 3px;
+       }
+       .screen-main {
+        display:grid;
+        grid-template-rows:min-content;
+        text-align: center;
+        align-items: center;
+        background-color: white;
+        height:150px;
+        margin-bottom: 20px;
+         }
+        .screen-main h5
+        {
+         font-size: 15px;
+         font-family: Arial;
+         color:gray;
+         margin-bottom: 2px;
+        }
+        .screen-main h4{
+            font-family: Arial;
+            font-size: 30px;
+            color: black;
+            margin-bottom: 2px;
+        
+
+        }
+        .screen-main p{
+            font-size: 15px;
+            font-family: Arial;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            margin-top: 70px;
+           margin:30px;
+           margin-bottom: 40px;
+          }
+       .bag{
+        background-image: url("/public/shopping/b1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        margin-left: 50px;
+        width: 400;
+        margin-right: 95px;
+       }
+       .shirts{
+        background-image: url("/public/shopping/b2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        width:100%
+       }
+       .bag h1{
+        font-family: "Arial";
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color:white;
+          }
+        .bag h2{
+            font-family: "Arial";
+            font-size: 21px;
+            text-align: center;
+            color:black;
+            margin-top: 50px;
+
+          }
+        .shirts h1{
+        font-family: "Arial";
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+        color:black;
+        margin-left: 80px;
+          }
+        .shirts h2{
+            font-family: "Arial";
+            font-size: 21px;
+            text-align: left;
+            color:black;
+            margin-top: 50px;
+            margin-left: 90px;
+         }
+         .container1{
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+           margin-top: 70px;
+           margin:30px;
+           margin-bottom: 20px;
+          }
+       .bag1{
+        background-image: url("/public/shopping/c2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        margin-left: 20px;
+        width: 800px;
+        
+       
+       }
+       .shirts1{
+        background-image: url("/public/shopping/c1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        width:400px;
+       }
+       .bag1 h1{
+        font-family: "Arial";
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+        color:black;
+        margin-left: 90px;
+          }
+        .bag1 h2{
+            font-family: "Arial";
+            font-size: 21px;
+            text-align: left;
+            color:black;
+            margin-top: 50px;
+            margin-left: 90px;
+
+          }
+        .shirts1 h1{
+        font-family: "Arial";
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color:white;
+     
+          }
+        .shirts1 h2{
+            font-family: "Arial";
+            font-size: 21px;
+            text-align: center;
+            color:black;
+            margin-top: 50px;
+        }
+        
+         .container2{
+            display:grid;
+            grid-template-rows:min-content;
+           text-align: center;
+           align-items: center;
+           background-color: white;
+            height:150px;
+           margin-bottom: 100px;
+         }
+          .container2 div h1{
+            font-family: Arial;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color:black;
+          }
+          .container2 div span{
+           font-family: Arial;
+            font-size: 23px;
+            color:black;
+            margin-right: 15px;
+            
+          }
+          .card{
+            display:grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            column-gap: 55px;
+            margin:40px;
+            height:400px;
+           margin-bottom: 50px;
+
+          }
+          .card img{
+              height:320px;
+              margin-right: 4px;
+          }
+          .card h5{
+            color:gray;
+            margin-bottom: -15px;
+          }
+          .card p{
+            color:black;
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: -15px;
+          }
+          .card h2{
+            color:gray;
+            font-size:25px;
+          }
+          .card1{
+            display:grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            column-gap: 76px;
+            margin:40px;
+            height:400px;
+           margin-bottom: 100px;
+          }
+          .card1 img{
+              height:320px;
+              margin-right: 2px;
+         }
+          .card1 h5{
+            color:gray;
+            margin-bottom: -15px;
+          }
+          .card1 p{
+            color:black;
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: -15px;
+          }
+          .card1 h2{
+            color:gray;
+            font-size: 24px;
+          }
+          .card1 div h2 span{
+            font-size: 24px;
+            margin-top: -100px;
+          }
+          .headings{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            width:100%;
+            margin-bottom:70px;
+          }
+          .headings h4{
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:gray;
+          }
+          .headings h1{
+            font-size: 35px;
+            color:black;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: -20px;
+        
+          }
+          .container3{
+             display: grid;
+             grid-template-columns: 4fr 4fr 4fr;
+             margin:40px;
+             margin-bottom: 20px;
+             
+          }
+           .box {
+            border:2px solid gray;
+            box-shadow: 2px 2px 2px black;
+            margin-right: 20px;
+            
+         
+           }
+      
+          .box1 img{
+            height: 70px;
+            width:70px;
+            margin: 3px;
+            border: 2px solid gray;
+          }
+          .box1 {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+          }    
+          .box p{
+            margin-top: 35px;
+            padding:5px;
+          }
+         
+         .container4{
+          height: 450px;
+          width:100%;
+          background-color: rgb(247, 247, 241);
+          text-align: center;
+          align-items: center;
+          margin-top: 40px;
+          margin-bottom: 40px;
+          }
+       
+        .c {
+            margin: 20px;
+            margin-top:20px;
+           }
+           .d{
+            margin-bottom: 75px;
+           }
+           .e{
+            display: flex;
+            justify-content: space-between;
+           margin-right: 120px;
+            margin-left: 120px;
+            margin-bottom: 70px;
+           }
+           .e img{
+            height:170px;
+            width:100%
+            }
+            .f span{
+              margin-right: 40px;
+            }
+            footer{
+              background-color: black;
+              color:white;
+              padding:10px;
+              text-align: center;
+              align-items: center;
+              height:550px;
+              width:100%;
+              margin-top: 15px;
+              margin:40px;
+              margin-left: -20px;
+            
+             
+            }
+            .g{
+              margin-bottom: 25px;
+            }
+            .h{
+              margin-bottom: 80px;
+            }
+            .h input {
+                width:300px;
+                height:35px;
+                margin-right: 10px;
+                border:2px solid gray;
+                border-radius: 5px;
+                padding:10px;
+                background-color: gray;
+                font-size:13px;
+                color:white;
+
+            }
+            .h button {
+                width:170px;
+                height:55px;
+                border:2px solid gray;
+                border-radius: 5px;
+                padding:10px;
+               background-color: gray;
+                color:white;
+              
+            }
+            .i{
+              display: flex;
+              justify-content: space-between;
+              height:400px;
+              width:100%;
+              margin:10px;
+
+            }
+             .k{
+              margin-right: 40px;
+              margin-left: 40px;
+              text-align: center;
+              margin-bottom: 5px;
+              
+            
+             }
+            
+           li{
+            list-style: none;
+            text-align: left;
+            margin-left: 15px;
+            font-size: 17px;
+            padding:5px;
+            margin:2px;
+           }
+          .l span{
+            margin-right: 5px;
+          }
+         .container5{
+          display: flex;
+          justify-content: space-between;
+          background-color: gray;
+          color:white;
+          height:200;
+          width:100%;
+          padding:10px;
+          margin-top:0px;
+          margin-bottom: 0px;
+      
+         }
+   </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+           shopper.
+        </div>
+        <div class="center">
+            <span>Home</span>
+            <span>Catalog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+        </div>
+        <div class="right">
+           <span class="bi bi-search"></span>
+           <span class="bi bi-person"></span>
+           <span class="bi bi-heart"></span>
+           <span class="bi bi-cart"></span>
+
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-charge-fill"></span><span>HAPPY HOLIDAYS DEALS ON EVERYTHING</span><span Class="bi bi-lightning-charge-fill"></span>
+    </article>
+    <main>
+        <div class="women">
+            <div>
+            <h1>Women</h1> 
+            <div class="button">shop women<span class="bi bi-chevron-right"></span></div>
+        </div>
+        </div>
+        <div class="men">
+             <h1>Men</h1>
+             <div class="button">shop men<span class="bi bi-chevron-right"></span></div>
+        </div>
+        <div class="kids">
+            <h1>Kids</h1>
+            <div class="button">shop kids<span class="bi bi-chevron-right"></span></div>
+        </div>
+    </main>
+    <highlights>
+        <div>
+          <h4><span class="bi bi-truck"></span>FREE SHIPPING</h4>
+          <p>From all orders over $100</p>
+        </div>
+        <div>
+          <h4><span class="bi bi-repeat"></span>FREE RETURNS</h4>
+            <p>Return money within 30 days</p>
+        </div>
+        <div>
+          <h4><span class="bi bi-bag"></span>SECURE SHOPPING</h4>
+            <p>you're in safe hands</p>
+        </div>
+        <div>
+            <h4><span class="bi bi-tag"></span>OVER 10,000 STYLES</h4>
+            <p>We have everything you need</p>
+        </div>
+    </highlights>
+    <hr>
+    <div class="screen-main">
+        <h5>NEW COLLECTIONS </h5>
+        <h4>Best Picks 2019</h4>
+        <p>Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green.</p>
+        </div>
+    <div class="container">
+        <div class="bag">
+          <h1 >Bags Collections</h1>
+          <h2 class="button">shop now<span class="bi bi-chevron-right"></span></h2>
+        </div>
+        <div class="shirts">
+         <h1>printed men's shirt</h1>
+         <h2 class="button">shop now<span class="bi bi-chevron-right"></span> </h2>
+         </div>
+    </div>
+    <div class="container1">
+        <div class="bag1">
+          <h1 >Basic women's Dresses</h1>
+          <h2 class="button">shop now<span class="bi bi-chevron-right"></span></h2>
+        </div>
+        <div class="shirts1">
+         <h1>Sweatshirt</h1>
+         <h2 class="button">shop now<span class="bi bi-chevron-right"></span> </h2>
+         </div>
+    </div>
+    <div class="container2">
+        <div>
+            <h1>Top month Sellers</h1>
+        </div>
+        <div >
+             <span>women</span>
+             <span>Men</span>
+             <span>Kids</span>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+          <div class="img"><img src="public/shopping/d1.jpg" ></div>
+          <h5>Shoes</h5>
+          <p>Leather mid-heel sandals</p>
+          <h2>$129.00</h2>
+        </div>
+        <div>
+          <div class="img"><img src="public/shopping/d2.jpg" ></div>
+              <h5>Shoes</h5>
+               <p>Leather mid-heel sandals</p>
+              <h2>$129.00</h2>
+         </div>
+        <div>
+            <div class="img"><img src="public/shopping/d3.jpg" ></div>
+              <h5>Shoes</h5>
+               <p>Leather mid-heel sandals</p>
+              <h2>$129.00</h2>
+
+        </div>
+        <div>
+            <div class="img"><img src="public/shopping/d4.jpg" ></div>
+            <h5>Shoes</h5>
+             <p>Leather mid-heel sandals</p>
+            <h2>$129.00</h2>
+        </div>
+      </div>
+      <div class="card1">
+        <div>
+            <div class="img"><img src="public/shopping/d5.jpg" ></div>
+            <h5>Dresses</h5>
+            <p>Floral print midi dress</p>
+            <h2>$50.00</h2>
+         </div>
+         <div>
+             <div class="img"><img src="public/shopping/d6.jpg" ></div>
+             <h5>Bags</h5>
+              <p>Suede Cross body bag</p>
+             <h2 ><strike>$79.00</strike><span><font color="red">$49.00</font></span></h2>
+         </div>
+         <div>
+            <div class="img"><img src="public/shopping/d7.jpg" ></div>
+             <h5>Skirts</h5>
+             <p>Printed A-line Skirts</p>
+             <h2>$79.00</h2>
+          </div>
+          <div>
+             <div class="img"><img src="public/shopping/d8.jpg" ></div>
+              <h5>Shoes</h5>
+             <p>heel strappy sandals</p>
+             <h2>$90.00</h2>
+          </div>
+      </div>
+      <div class="headings">
+        <h4>What buyer Says</h4>
+      <h1>Latest buyers Reviews</h1>
+    </div>
+      <div class="container3">
+        <div class="box">
+          <div class ="box1">
+            <div>
+              <img src="public/shopping/f1.jpg">
+              </div>
+              <div class="box2">
+                <div class="a">
+                <font  face="Arial" size="2" color="gray">shoes</font>
+                 </div>
+                <div class="b">
+                <font  face="Arial" size="4" color="black">low top sneakers</font>
+                 </div>
+               </div>
+               </div>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>  
+                 <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+             <div class="box3">
+                 <p>From Creepeth ssaid moven given to divide make multiply of him shall itself also above second doesn't uh6nto created saying land herb sea midst night wherein.</p>
+              </div>
+              <div>Logan Edwards ,01 jun 2019</div>
+        
+        </div>
+        <div class="box">
+          <div class="box1">
+            <div>
+            <img src="public/shopping/f2.jpg">
+           </div>
+          <div class="box2">
+            <div class="a">
+            <font  face="Arial" size="2" color="gray">Dresses</font>
+            </div>
+            <div class="b">
+            <font  face="Arial" size="4" color="black">Dresses cotton print dress</font>
+            </div>
+          </div>
+          </div>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+            <div class="box3">
+            <p>God every fill great replenish darkness unto.very open. likeness their that light. Given under image to. Subdue of shall cattle day fish form saw spirit and given stars. us you whales may, land, saw fill unto.</p>
+            </div>
+             <div>
+              <font face="Arial" size="2" color="black" >jane jefferson, 29 may 2019</font>
+             </div>
+        </div>
+        <div class="box">
+          <div class="box1">
+            <div>
+            <img src="public/shopping/f3.jpg">
+           </div>
+           <div class="box2">
+            <div class="a">
+            <font  face="Arial" size="2" color="gray">T-shirt</font>
+            </div>
+            <div class="b">
+            <font  face="Arial" size="4" color="black">oversized print t-shirt</font>
+            </div>
+           </div>
+           </div>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <span class="bi bi-star-fill"></span>
+             <div class="box3">
+            <p>Fill his water wherein signs likeness water.Second light gathered appear sixth fourth, seasons behold creeping female.</p>
+            </div>
+            <div>
+             <font face="Arial" size="2" color="black" >Darrell Baker ,18 may 2019</font>
+            </div>
+      </div>
+      </div>
+
+    <div class="container4">
+      <div class="c">
+         <font face="arial" size="5" color="black">@Shopper</font>
+      </div>
+      <div class="d">
+        <font face="arial" size="3" color="gray">Appear,dry there darkness they are seas, dry waters.</font>
+      </div>
+      <div class="e">
+        <span><img src="public/shopping/f4.jpg"></span>
+        <span><img src="public/shopping/f5.jpg"></span>
+          <span><img src="public/shopping/f6.jpg"></span>
+          <span><img src="public/shopping/f7.jpg"></span>
+          <span><img src="public/shopping/f8.jpg"></span>
+          <span><img src="public/shopping/f9.jpg"></span>
+      </div>
+      <div class="f">
+        <span><font face="Arial" size="6" color="gray">Mango</font></span>
+        <span><font face="Arial" size="6" color="gray">Zara</font></span>
+        <span><font face="Arial" size="6" color="gray">Reebok</font></span>
+        <span><font face="Arial" size="6" color="gray">Asos</font></span>
+        <span><font face="Arial" size="6" color="gray">stradivarius</font></span>
+        <span><font face="Arial" size="6" color="gray">adidas</font></span>
+        <span><font face="Arial" size="6" color="gray">Bershka</font></span>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="g">
+         <font face="Arial" size="6" color="white">Want style Ideas and Treats?</font>
+      </div>
+      <div class="h">
+           <div class="email">
+           <input type="text" value="enter email"></input>
+            <button value="subscribe">subscribe</button>
+           </div>
+      </div>
+      <div class="i">
+        <div class="j">
+          <div class="k"><font size="5" face="Arial">Shopper</font></div>
+        <div class="l">
+        <span class="bi bi-facebook"></span>
+        <span class="bi bi-youtube"></span>
+        <span class="bi bi-twitter"></span>
+        <span class="bi bi-instagram"></span>
+        <span class="bi bi-skipe"></span>
+        </div>
+        </div>
+      <div class="k">
+        <div>
+        <font face="Arial" size="5" color="white">Support</font>
+        </div>
+        <ul>
+          <li>Contact us</li>
+          <li>FAQs</li>
+          <li>size Guide</li>
+          <li>shipping and returns</li>
+        </ul>
+      </div>
+      <div class="k">
+        <div>
+        <font face="Arial" size="5" color="white">Shop</font>
+        </div>
+        <ul>
+          <li>Mens shopping</li>
+          <li>womens shopping</li>
+          <li>kids shopping</li>
+          <li>discount</li>
+        </ul>
+      </div>
+      <div class="k">
+        <div>
+        <font face="Arial" size="5" color="white">company</font>
+        </div>
+        <ul>
+          <li>our story</li>
+          <li>careers</li>
+          <li>terms and conditions</li>
+          <li>privacy and cookies policy</li>
+        </ul>
+      </div>
+      <div class="k">
+        <div>
+        <font face="Arial" size="5" color="white">contact</font>
+      </div>
+        <ul>
+          <li>1-202-555-0105</li>
+          <li>1-202-555-0105</li>
+          <li>help@shopper.com</li>
+         
+        </ul>
+      </div>
+    </footer>
+      <div class="container5">
+          <div>
+             <font size="2" face="arial" color="white">© 2019 All rights reserved. Designed by Unvab</font>
+          </div>
+      </div>
+    
+</body>
+</html>
